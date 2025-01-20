@@ -39,6 +39,7 @@ public class ApplicationConfig {
         CorsConfiguration cfg = new CorsConfiguration();
         cfg.setAllowedOrigins(Arrays.asList("http://localhost:5173", "https://task-management-system/"));
         cfg.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
+        cfg.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type", "Accept"));
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", cfg);
         return source;
